@@ -1,4 +1,4 @@
-name: Deploy Node Server
+name: Deploy React App
 
 on:
   push:
