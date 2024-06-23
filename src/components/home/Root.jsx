@@ -16,7 +16,7 @@ const Root = () => {
             method: "GET",
             redirect: "follow"
         };
-        fetch(`${REACT_APP_SERVER_BASE_URL}api/cafes/${cafeChoice}`, requestOptions)
+        fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/cafes/${cafeChoice}`, requestOptions)
             .then(async (response) => { const data = await response.json(); setCafeData(data); })
             .catch((error) => console.error(error));
     }, [cafeChoice])
@@ -26,7 +26,7 @@ const Root = () => {
             method: "GET",
             redirect: "follow"
         };
-        fetch(`${REACT_APP_SERVER_BASE_URL}api/cafes`, requestOptions)
+        fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/cafes`, requestOptions)
             .then(async (response) => { const data = await response.json(); setData(data); setShowData(data.slice(0, 10)); })
             .catch((error) => console.error(error));
     }, [])
