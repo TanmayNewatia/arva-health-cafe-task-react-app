@@ -11,7 +11,7 @@ const CafePage = () => {
       method: "GET",
       redirect: "follow"
     };
-    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/api/cafes/${pathname[2]}`, requestOptions)
+    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/cafes/${pathname[2]}`, requestOptions)
       .then(async (response) => { const data = await response.json(); setData(data); })
       .catch((error) => console.error(error));
   }, [pathname])
